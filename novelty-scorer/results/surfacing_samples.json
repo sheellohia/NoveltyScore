@@ -1,0 +1,83 @@
+{
+ "topic": "remote_work",
+ "thresholds": {
+  "novel_max_redundancy": 0.5269070863723755,
+  "redundant_min_redundancy": 0.6352739930152893
+ },
+ "cases": {
+  "T1_novel_relevant": {
+   "net_new_ratio": 1.0,
+   "sentences": [
+    {
+     "text": "Nobody's talking about the accountants.",
+     "label": "novel",
+     "redundancy": 0.3433,
+     "novelty_contribution": 0.6567,
+     "closest_id": "s23",
+     "closest_snippet": "What we're killing isn't the office; it's the mandatory office."
+    },
+    {
+     "text": "When an employee works from a different state or country than their employer, it can trigger tax nexus, payroll obligations, and permanent-establishment rules written for a world where work had a fixed address.",
+     "label": "partial",
+     "redundancy": 0.5409,
+     "novelty_contribution": 0.4591,
+     "closest_id": "s40",
+     "closest_snippet": "It complicates the tidy story that remote work lets you keep a big-city salary in a small…"
+    },
+    {
+     "text": "Companies are discovering they owe filings in jurisdictions they never operated in, and some quietly restrict where remote staff may live to limit exposure.",
+     "label": "partial",
+     "redundancy": 0.5499,
+     "novelty_contribution": 0.4501,
+     "closest_id": "s16",
+     "closest_snippet": "Over time, distributed companies can drift into loose collections of contractors who happ…"
+    },
+    {
+     "text": "The likeliest long-term outcome isn't remote winning or losing; it's a wave of tax-law reform forced by workforces that no longer sit where the rules assume.",
+     "label": "novel",
+     "redundancy": 0.5124,
+     "novelty_contribution": 0.4876,
+     "closest_id": "s18",
+     "closest_snippet": "It won't, and when it loosens, the mandates will quietly win."
+    }
+   ]
+  },
+  "T3_near_duplicate": {
+   "net_new_ratio": 0.15,
+   "sentences": [
+    {
+     "text": "Think about everything clustered around an office tower: the deli, the tailor, the bar where people unwind after five.",
+     "label": "redundant",
+     "redundancy": 0.6651,
+     "novelty_contribution": 0.3349,
+     "closest_id": "s11",
+     "closest_snippet": "A downtown office district is an ecosystem: the sandwich shop, the shoe repair, the after…"
+    },
+    {
+     "text": "All of it runs on the crowd that remote work has scattered.",
+     "label": "partial",
+     "redundancy": 0.5551,
+     "novelty_contribution": 0.4449,
+     "closest_id": "s11",
+     "closest_snippet": "Remote work's benefits flow to individual knowledge workers, but the costs land on whole…"
+    },
+    {
+     "text": "With the foot traffic gone, those little businesses fold, the jobs they provided disappear, and the taxes they paid shrink, leaving cities with less to spend on the buses and services all residents rely on.",
+     "label": "redundant",
+     "redundancy": 0.7886,
+     "novelty_contribution": 0.2114,
+     "closest_id": "s11",
+     "closest_snippet": "Now storefronts sit empty and tax bases shrink, which means less money for transit and se…"
+    },
+    {
+     "text": "The upside of remote work goes to individuals; the bill lands on entire districts.",
+     "label": "redundant",
+     "redundancy": 0.6543,
+     "novelty_contribution": 0.3457,
+     "closest_id": "s11",
+     "closest_snippet": "Remote work's benefits flow to individual knowledge workers, but the costs land on whole…"
+    }
+   ]
+  }
+ }
+}

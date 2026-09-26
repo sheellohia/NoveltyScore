@@ -1,0 +1,62 @@
+[
+ {
+  "check": "fresh startup works",
+  "result": "PASS",
+  "evidence": "verified this session: git clone (79 tracked files, no .env/.venv/node_modules) -> make setup -> make backend (health ok, models downloaded) -> make frontend -> 5/5 topics scored in UI, no error text -> make test 81 passed"
+ },
+ {
+  "check": "no stubs/raw errors on main path",
+  "result": "PASS",
+  "evidence": "0 stub/TODO markers in main-path code; live API llm_source=unavailable, rationale clean=True"
+ },
+ {
+  "check": "Task1 three properties + fixed<=100w",
+  "result": "PASS",
+  "evidence": "test_task1_fixed_content_at_most_100_words 5/5; test_task1_every_submission_has_the_three_properties 5/5; test_content_over_100_words_rejected 1/1"
+ },
+ {
+  "check": "Task2 novelty+relevance gate documented",
+  "result": "PASS",
+  "evidence": "test_on_topic_corpus_passes_gate 5/5; test_offtopic_T2_is_stopped_by_the_gate 5/5; SOLUTION gate sections=True"
+ },
+ {
+  "check": "Task3 ~50-item corpus scoring works",
+  "result": "PASS",
+  "evidence": "test_task3_corpus_of_about_50_items_is_scored 5/5; test_task3_new_submission_scored_against_full_corpus 5/5; sizes=[50, 50, 50, 50, 50]"
+ },
+ {
+  "check": "Task4 high-nov/low-rel NOT rewarded test PASSES",
+  "result": "PASS",
+  "evidence": "test_high_novelty_low_relevance_not_rewarded 5/5; test_high_novelty_low_relevance_not_rewarded_via_api 5/5"
+ },
+ {
+  "check": "golden dataset named + documented",
+  "result": "PASS",
+  "evidence": "data/README.md covers all"
+ },
+ {
+  "check": "tests run with one command + reports generated",
+  "result": "PASS",
+  "evidence": "`make test`; 81 tests, 0 failing; reports: test_report.html, junit.xml, index.html"
+ },
+ {
+  "check": "SOLUTION.md maps to Tasks 1-4 + criteria/achievement",
+  "result": "PASS",
+  "evidence": "all sections present; criteria={'C1': 'PASS', 'C2': 'PARTIAL', 'C3': 'PARTIAL', 'C4': 'PASS', 'C5': 'PASS', 'C6': 'PASS'}"
+ },
+ {
+  "check": "agents.md present + substantive",
+  "result": "PASS",
+  "evidence": "1901 words; all 5 sections"
+ },
+ {
+  "check": "README present + quickstart works",
+  "result": "PASS",
+  "evidence": "quickstart + links present; quickstart exercised by the fresh checkout (row 1)"
+ },
+ {
+  "check": "deterministic + judge-cache fallback + no committed secrets",
+  "result": "PASS",
+  "evidence": "test_scoring_is_deterministic_across_three_fresh_runs 1/1; test_no_secret_keys_in_repository_files 1/1; test_corpus_item_falls_back_to_cached_reference 1/1; test_judge_failure_is_clean_and_labelled 1/1; cached corpus verdicts=750; C6=PASS"
+ }
+]

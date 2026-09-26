@@ -1,0 +1,347 @@
+{
+  "ai_tutors": {
+    "near_duplicate_ids": [
+      {
+        "id": "s41",
+        "duplicates": "s3"
+      },
+      {
+        "id": "s42",
+        "duplicates": "s9"
+      },
+      {
+        "id": "s43",
+        "duplicates": "s20"
+      },
+      {
+        "id": "s44",
+        "duplicates": "s33"
+      },
+      {
+        "id": "s45",
+        "duplicates": "s25"
+      }
+    ],
+    "generic_ids": [
+      "s46",
+      "s47",
+      "s48",
+      "s49",
+      "s50"
+    ],
+    "held_out_test_cases": [
+      {
+        "case": "T1_novel_relevant",
+        "expect": "high",
+        "submission": {
+          "header": "The tutor's logs could spot disabilities years early",
+          "content": "Overlooked angle: an AI tutor records every hesitation, repeated error, and abandoned problem. That interaction trail is a rich diagnostic signal. Patterns that take a human months to notice, or that slip past entirely, could surface a possible dyslexia or dyscalculia flag within weeks. Used carefully, the same logging that raises privacy fears could become the earliest, cheapest screening tool schools have ever had for learning differences, catching kids before they're written off as lazy.",
+          "takeaway": "Interaction logs could flag learning disabilities remarkably early"
+        }
+      },
+      {
+        "case": "T2_novel_irrelevant",
+        "expect": "very_low",
+        "submission": {
+          "header": "A surprising stat about octopus intelligence",
+          "content": "Here's something genuinely strange: an octopus has around 500 million neurons, but roughly two-thirds sit in its arms, not its brain. Each arm can taste, decide, and act with striking autonomy; sever one and it keeps hunting for a while. Some researchers argue this is a radically different architecture of mind from our centralized one, a second, independent experiment in how intelligence can be built on Earth. It reshapes what we even mean by thinking.",
+          "takeaway": "Octopus intelligence is distributed strangely across its arms"
+        }
+      },
+      {
+        "case": "T3_near_duplicate",
+        "expect": "low",
+        "submission": {
+          "header": "Handing over answers skips the hard part that teaches",
+          "content": "The valuable moment in learning is the uncomfortable stretch right before understanding clicks, the wrong turns, the frustration. A tutor that jumps in with a hint or the answer the instant a student stalls erases exactly that. We could end up with kids who follow steps competently but panic facing a genuinely hard problem alone. Being able to push through being stuck by yourself is the real skill, and it's what we'd be quietly training out of them.",
+          "takeaway": "Rescuing students too fast trains away independent problem-solving"
+        }
+      },
+      {
+        "case": "T4_generic_relevant",
+        "expect": "low_medium",
+        "submission": {
+          "header": "There are pros and cons to weigh here",
+          "content": "AI tutors clearly have both benefits and drawbacks, and schools will need to weigh them carefully. On one hand they could help students; on the other there are real concerns. It's an important issue and reasonable people disagree, so districts should think it through before deciding. Time will tell how it all shakes out.",
+          "takeaway": "There are pros and cons; schools should weigh them"
+        }
+      }
+    ]
+  },
+  "ev_green": {
+    "near_duplicate_ids": [
+      {
+        "id": "s41",
+        "duplicates": "s1"
+      },
+      {
+        "id": "s42",
+        "duplicates": "s10"
+      },
+      {
+        "id": "s43",
+        "duplicates": "s17"
+      },
+      {
+        "id": "s44",
+        "duplicates": "s27"
+      },
+      {
+        "id": "s45",
+        "duplicates": "s33"
+      }
+    ],
+    "generic_ids": [
+      "s46",
+      "s47",
+      "s48",
+      "s49",
+      "s50"
+    ],
+    "held_out_test_cases": [
+      {
+        "case": "T1_novel_relevant",
+        "expect": "high",
+        "submission": {
+          "header": "Minor crashes are scrapping barely-used batteries",
+          "content": "Here's a wrinkle nobody mentions: after even a small collision, insurers often write off EVs because the battery pack can't be safely inspected or cheaply certified, so a nearly new car with thousands of clean kilometres left gets scrapped. That throws away all the embodied manufacturing carbon prematurely, resetting the lifetime-emissions clock to zero before the vehicle ever repaid its build. Greenness assumes cars live long enough to break even; a write-off culture around un-inspectable batteries quietly undermines the entire lifecycle argument.",
+          "takeaway": "Writing off crashed EVs wastes their embodied carbon"
+        }
+      },
+      {
+        "case": "T2_novel_irrelevant",
+        "expect": "very_low",
+        "submission": {
+          "header": "The tile economics of competitive Scrabble are broken",
+          "content": "Tournament Scrabble has a quiet crisis: the standard letter distribution, fixed decades ago, no longer matches how modern word lists are actually played. High-value consonants like J and Q have become liabilities, while blanks and S tiles dominate expert games to an almost deterministic degree. Serious players argue the bag should be rebalanced, adjusting tile counts and point values so skill, not luck of the draw, decides matches. Until the governing bodies act, the numbers say the game rewards the lucky rack far more than anyone admits.",
+          "takeaway": "Scrabble's tile distribution rewards luck over skill"
+        }
+      },
+      {
+        "case": "T3_near_duplicate",
+        "expect": "low",
+        "submission": {
+          "header": "Electric drive squeezes more out of every joule",
+          "content": "One point gets lost in grid arguments: an electric powertrain turns most of the energy it receives into forward motion, whereas an engine that burns petrol loses the majority as waste heat. So even drawing from a middling mix of power sources, an electric car travels further per unit of raw energy. Throw in braking that recovers energy usually wasted when slowing, and the gap grows wider still. The efficiency edge exists before you even ask how the electricity was made.",
+          "takeaway": "Electric drivetrains beat engines on raw efficiency"
+        }
+      },
+      {
+        "case": "T4_generic_relevant",
+        "expect": "low_medium",
+        "submission": {
+          "header": "Electric cars are the future, probably",
+          "content": "Electric cars seem to be the way things are heading, and that's probably a good thing overall. They have some clear benefits but also a few downsides, like anything. It's a topic lots of people are talking about right now, and for good reason. In the end it's hard to say exactly how it'll all shake out, but staying informed and keeping an open mind is definitely the sensible approach for everyone as the technology continues to improve.",
+          "takeaway": "EVs are probably the future; stay open-minded"
+        }
+      }
+    ]
+  },
+  "four_day_week": {
+    "near_duplicate_ids": [
+      {
+        "id": "s41",
+        "duplicates": "s1"
+      },
+      {
+        "id": "s42",
+        "duplicates": "s7"
+      },
+      {
+        "id": "s43",
+        "duplicates": "s3"
+      },
+      {
+        "id": "s44",
+        "duplicates": "s29"
+      },
+      {
+        "id": "s45",
+        "duplicates": "s10"
+      }
+    ],
+    "generic_ids": [
+      "s46",
+      "s47",
+      "s48",
+      "s49",
+      "s50"
+    ],
+    "held_out_test_cases": [
+      {
+        "case": "T1_novel_relevant",
+        "expect": "high",
+        "submission": {
+          "header": "Fewer days may quietly starve juniors of mentorship",
+          "content": "One overlooked cost: early-career workers learn most through unplanned overhearing, quick questions, and shadowing senior colleagues. Compressing the week into four dense, heads-down days can squeeze out exactly that informal apprenticeship, since everyone is too busy hitting targets to teach. The seniors keep their expertise; the juniors quietly accumulate less of it. Over years, a four-day norm could slow how fast the next generation actually becomes competent.",
+          "takeaway": "Denser weeks may erode informal learning for juniors."
+        }
+      },
+      {
+        "case": "T2_novel_irrelevant",
+        "expect": "very_low",
+        "submission": {
+          "header": "Arctic terns fly a staggering distance each year",
+          "content": "Here's a genuinely astonishing figure: the Arctic tern migrates roughly seventy thousand kilometres a year, pole to pole, the longest known animal migration on Earth. Over a thirty-year lifespan that's comparable to flying to the Moon and back several times. Researchers tracked them with tiny geolocators to confirm the zigzagging routes they take to catch favourable winds across two oceans. Nature's endurance records are almost unbelievable.",
+          "takeaway": "Arctic terns migrate pole to pole every year."
+        }
+      },
+      {
+        "case": "T3_near_duplicate",
+        "expect": "low",
+        "submission": {
+          "header": "A shrunk week forces teams to cut the fat",
+          "content": "Hand a team four days instead of five and the pointless meetings and filler tasks that used to pad the schedule get axed fast. Agendas get shorter, updates move to a message, and priorities snap into focus under the tighter constraint. What years of productivity coaching failed to achieve, a hard limit on time accomplishes almost overnight by making waste impossible to ignore.",
+          "takeaway": "A time limit forces teams to cut busywork."
+        }
+      },
+      {
+        "case": "T4_generic_relevant",
+        "expect": "low_medium",
+        "submission": {
+          "header": "The four-day week has upsides and downsides",
+          "content": "Like most workplace changes, the four-day work week comes with both benefits and drawbacks. It can help some employees and be difficult for certain roles. Companies should think carefully about their own situation before deciding. There isn't a one-size-fits-all answer, so each business needs to weigh the pros and cons for itself before making any changes.",
+          "takeaway": "Weigh the pros and cons for your situation."
+        }
+      }
+    ]
+  },
+  "remote_work": {
+    "near_duplicate_ids": [
+      {
+        "id": "s41",
+        "duplicates": "s1"
+      },
+      {
+        "id": "s42",
+        "duplicates": "s10"
+      },
+      {
+        "id": "s43",
+        "duplicates": "s2"
+      },
+      {
+        "id": "s44",
+        "duplicates": "s9"
+      },
+      {
+        "id": "s45",
+        "duplicates": "s5"
+      }
+    ],
+    "generic_ids": [
+      "s46",
+      "s47",
+      "s48",
+      "s49",
+      "s50"
+    ],
+    "held_out_test_cases": [
+      {
+        "case": "T1_novel_relevant",
+        "expect": "high",
+        "submission": {
+          "header": "Remote work is quietly breaking the tax code",
+          "content": "Nobody's talking about the accountants. When an employee works from a different state or country than their employer, it can trigger tax nexus, payroll obligations, and permanent-establishment rules written for a world where work had a fixed address. Companies are discovering they owe filings in jurisdictions they never operated in, and some quietly restrict where remote staff may live to limit exposure. The likeliest long-term outcome isn't remote winning or losing; it's a wave of tax-law reform forced by workforces that no longer sit where the rules assume.",
+          "takeaway": "Remote work will force a rewrite of tax rules"
+        }
+      },
+      {
+        "case": "T2_novel_irrelevant",
+        "expect": "very_low",
+        "submission": {
+          "header": "Krill may be the ocean's most underrated carbon engine",
+          "content": "Antarctic krill are tiny, but their collective biomass rivals that of humanity. Each day they migrate hundreds of meters vertically, feeding near the surface and excreting carbon-rich pellets that sink to the deep ocean, effectively pumping carbon out of the atmosphere. Recent estimates suggest this krill biological pump sequesters tens of millions of tons of carbon annually. As warming shrinks sea ice and krill habitat, we may be quietly dismantling one of the planet's largest natural carbon sinks without ever noticing.",
+          "takeaway": "Shrinking krill populations threaten a huge carbon sink"
+        }
+      },
+      {
+        "case": "T3_near_duplicate",
+        "expect": "low",
+        "submission": {
+          "header": "When the workers vanish, so do the corner shops",
+          "content": "Think about everything clustered around an office tower: the deli, the tailor, the bar where people unwind after five. All of it runs on the crowd that remote work has scattered. With the foot traffic gone, those little businesses fold, the jobs they provided disappear, and the taxes they paid shrink, leaving cities with less to spend on the buses and services all residents rely on. The upside of remote work goes to individuals; the bill lands on entire districts.",
+          "takeaway": "Remote work drains the local economies around offices"
+        }
+      },
+      {
+        "case": "T4_generic_relevant",
+        "expect": "low_medium",
+        "submission": {
+          "header": "Remote work has changed things and companies must adapt",
+          "content": "There's no question that remote work has changed a lot about how we do our jobs, and companies are going to need to figure out what works best for them going forward. It's an important issue that affects many people, and there are good points on all sides. In the end, businesses and employees will have to find the right balance for their situation. Only time will tell exactly how it all shakes out, but it's clearly here for now.",
+          "takeaway": "Companies will need to adapt to changing work"
+        }
+      }
+    ]
+  },
+  "teen_social_media": {
+    "near_duplicate_ids": [
+      {
+        "id": "s41",
+        "duplicates": "s9"
+      },
+      {
+        "id": "s42",
+        "duplicates": "s27"
+      },
+      {
+        "id": "s43",
+        "duplicates": "s33"
+      },
+      {
+        "id": "s44",
+        "duplicates": "s1"
+      },
+      {
+        "id": "s45",
+        "duplicates": "s19"
+      }
+    ],
+    "generic_ids": [
+      "s46",
+      "s47",
+      "s48",
+      "s49",
+      "s50"
+    ],
+    "held_out_test_cases": [
+      {
+        "case": "T1_novel_relevant",
+        "expect": "high",
+        "submission": {
+          "header": "Tax the harm instead of banning the users",
+          "content": "Here's an untried alternative: instead of prohibition, levy a per-minor-engagement fee on platforms and route it into school counselors and adolescent mental-health clinics. If teen attention is the product, make its extraction fund the repair. Companies could keep serving teens but would face a direct financial incentive to reduce compulsive engagement rather than maximize it, and struggling kids would get resourced services regardless of which app hooked them. It turns a binary fight over access into a tunable dial on design, and it sidesteps the enforcement problems that sink outright bans.",
+          "takeaway": "Price the externality so platforms fund the harm they cause."
+        }
+      },
+      {
+        "case": "T2_novel_irrelevant",
+        "expect": "very_low",
+        "submission": {
+          "header": "Vanilla prices are quietly wrecking Madagascar's farmers",
+          "content": "A fact that deserves more attention: natural vanilla is the second most expensive spice on earth, and roughly eighty percent of it comes from Madagascar. Prices have whipsawed from thirty dollars a kilo to over six hundred and back within a decade, driven by cyclones and speculation. That volatility traps smallholder farmers, who plant for a boom that busts before harvest. Synthetic vanillin now supplies the vast majority of the market, undercutting the very growers who produce the real thing. It's a textbook case of a commodity boom-bust hurting the poorest producers.",
+          "takeaway": "Vanilla's wild price swings crush Madagascar's smallholder farmers."
+        }
+      },
+      {
+        "case": "T3_near_duplicate",
+        "expect": "low",
+        "submission": {
+          "header": "From the front of the room, attention has cratered",
+          "content": "Two decades of teaching high school and the shift is impossible to miss. Students who used to work through a full reading now lose the thread after a few sentences, hands drifting toward a device that isn't even there. They're just as smart as ever, but their focus has been conditioned by constant feeds to crave a hit every few seconds, and a book simply can't deliver that. Whether banning is the answer I can't say, but pretending nothing has changed is something only people who don't teach can do.",
+          "takeaway": "Twenty years in, students can't hold a page anymore."
+        }
+      },
+      {
+        "case": "T4_generic_relevant",
+        "expect": "low_medium",
+        "submission": {
+          "header": "There are pros and cons we need to weigh",
+          "content": "At the end of the day, this is a complicated issue with valid concerns on both sides. Protecting kids matters, but so does freedom and not overreacting. We need to find a sensible balance and make sure any decision is thoughtful. It's important for parents, schools, and governments to work together. Ultimately there's no perfect answer, but we should keep talking about it and do what's best for young people.",
+          "takeaway": "It's complicated; we need a sensible, balanced approach."
+        }
+      }
+    ]
+  }
+}

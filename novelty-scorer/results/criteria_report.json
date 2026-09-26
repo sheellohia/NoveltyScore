@@ -1,0 +1,68 @@
+{
+ "C1": {
+  "name": "Adversarial rejection",
+  "target": "max T2 across topics < 0.2",
+  "actual": {
+   "t2_max": 0.0,
+   "t2_mean": 0.0
+  },
+  "verdict": "PASS",
+  "evaluated_on": "L6 +aggregation (FIELD_AGGREGATION=info_weighted) (full system)"
+ },
+ "C2": {
+  "name": "Ordering correctness",
+  "target": "T1>T4>T3>T2 holds for >= 4/5 topics",
+  "actual": {
+   "order_topics": 3,
+   "of": 5
+  },
+  "verdict": "PARTIAL",
+  "evaluated_on": "L6 +aggregation (FIELD_AGGREGATION=info_weighted) (full system)"
+ },
+ "C3": {
+  "name": "Redundancy detection",
+  "target": ">= 80% of planted dupes+generics in bottom quartile",
+  "actual": {
+   "redundancy": 0.66
+  },
+  "verdict": "PARTIAL",
+  "evaluated_on": "L6 +aggregation (FIELD_AGGREGATION=info_weighted) (full system)"
+ },
+ "C4": {
+  "name": "Judge fidelity",
+  "target": "system LOO Spearman > baseline Spearman",
+  "actual": {
+   "system_spearman": 0.47656681543745216,
+   "baseline_spearman": 0.4114042011908571,
+   "system_spearman_pooled": 0.49130725097253164,
+   "baseline_spearman_pooled": 0.439300491044378
+  },
+  "verdict": "PASS",
+  "evaluated_on": "L6 +aggregation (FIELD_AGGREGATION=info_weighted) (full system)"
+ },
+ "C5": {
+  "name": "Generalization",
+  "target": "mean per-fold |in-sample Spearman - LOTO held-out Spearman| < 0.15",
+  "actual": {
+   "gap": 0.058447446175703466,
+   "gap_of_means": 0.03270461169764366,
+   "in_sample": 0.47681040766350496,
+   "held_out": 0.4441057959658613
+  },
+  "verdict": "PASS",
+  "evaluated_on": "LOTO over matrix+reference candidates"
+ },
+ "C6": {
+  "name": "Determinism",
+  "target": "system score variance across 3 identical runs == 0 (judge run-to-run variance reported for contrast)",
+  "actual": {
+   "system_max_var": 0.0,
+   "bit_identical": true,
+   "judge_mean_var": 0.00803351111111111,
+   "judge_max_var": 0.07475555555555558,
+   "judge_measured": "yes"
+  },
+  "verdict": "PASS",
+  "evaluated_on": "L6 +aggregation (FIELD_AGGREGATION=info_weighted) (full system)"
+ }
+}

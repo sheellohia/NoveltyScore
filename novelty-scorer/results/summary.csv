@@ -1,0 +1,42 @@
+name,group,embedding,combine,gate,calibrated,floor_margin,gate_target,spearman_mean,spearman_pooled,baseline_spearman_mean,planted_case_pass_rate,order_topics,redundancy_bottom_q,t1_mean,t2_mean,t2_max,on_topic_gate_coverage,dup_nn_hit_rate,dup_nn_sim_pct_mean
+L0 baseline (TF-IDF),ladder,tf-idf,-,none,False,,,0.4114,0.4393,0.4114,0.0,0,0.5,0.8244,0.8708,0.906,,,
+"L1 +embeddings (kNN, ungated, raw)",ladder,snowflake-arctic-embed-m,linear,none,False,,,0.4403,0.4589,0.4114,0.0,0,0.68,0.1899,0.3569,0.4232,0.82,0.8,0.668
+"L2 +gate (asymmetric, fixed floor)",ladder,snowflake-arctic-embed-m,linear,asymmetric,False,,,0.5291,0.54,0.4114,0.0,2,0.76,0.1764,0.0249,0.1089,0.82,0.8,0.668
+"L3 +calibration (LOO percentiles, p10 floor)",ladder,snowflake-arctic-embed-m,rankfusion,asymmetric,True,,,0.5451,0.5393,0.4114,0.0,1,0.74,0.764,0.076,0.36,0.54,0.8,0.668
+L4 +recombination (pre-fix gate),ladder,snowflake-arctic-embed-m,rankfusion,asymmetric,True,,,0.5617,0.5586,0.4114,0.4,2,0.8,0.732,0.056,0.26,0.54,0.8,0.668
+L5 +on/off-topic gate,ladder,snowflake-arctic-embed-m,rankfusion,asymmetric,True,,,0.4586,0.471,0.4114,0.6,3,0.66,0.788,0.0,0.0,0.968,0.8,0.668
+L6 +aggregation (FIELD_AGGREGATION=info_weighted) (full system),ladder,snowflake-arctic-embed-m,rankfusion,asymmetric,True,,,0.4766,0.4913,0.4114,0.6,3,0.66,0.788,0.0,0.0,0.968,0.8,0.668
+"AGG base (fixed_mean, no net-new)",aggregation,snowflake-arctic-embed-m,rankfusion,asymmetric,True,,,0.4586,0.471,0.4114,0.6,3,0.66,0.788,0.0,0.0,0.968,0.8,0.668
+AGG A info-weighted fields,aggregation,snowflake-arctic-embed-m,rankfusion,asymmetric,True,,,0.4766,0.4913,0.4114,0.6,3,0.66,0.788,0.0,0.0,0.968,0.8,0.668
+AGG B-raw net-new blend (raw),aggregation,snowflake-arctic-embed-m,rankfusion,asymmetric,True,,,0.3042,0.3146,0.4114,0.4,3,0.44,0.512,0.0,0.0,0.968,0.8,0.668
+AGG B-rank net-new blend (rank),aggregation,snowflake-arctic-embed-m,rankfusion,asymmetric,True,,,0.4414,0.4507,0.4114,0.6,3,0.62,0.672,0.0,0.0,0.968,0.8,0.668
+AGG A+B-raw,aggregation,snowflake-arctic-embed-m,rankfusion,asymmetric,True,,,0.315,0.3262,0.4114,0.4,3,0.44,0.512,0.0,0.0,0.968,0.8,0.668
+AGG A+B-rank,aggregation,snowflake-arctic-embed-m,rankfusion,asymmetric,True,,,0.456,0.4659,0.4114,0.6,3,0.62,0.688,0.0,0.0,0.968,0.8,0.668
+"V1 brief literal: fixed-content signal, off-topic floor, temp 0.05",gatefix,snowflake-arctic-embed-m,rankfusion,asymmetric,True,,,0.5153,0.5225,0.4114,0.4,2,0.76,0.744,0.144,0.58,0.552,0.8,0.668
+"V2 fixed-content signal, off-topic floor, adaptive temp",gatefix,snowflake-arctic-embed-m,rankfusion,asymmetric,True,,,0.4671,0.4781,0.4114,0.4,2,0.7,0.788,0.184,0.92,0.948,0.8,0.668
+"V3 centroid signal, off-topic floor, temp 0.05",gatefix,snowflake-arctic-embed-m,rankfusion,asymmetric,True,,,0.4901,0.4969,0.4114,0.4,2,0.7,0.78,0.064,0.26,0.272,0.8,0.668
+V5 no gate (novelty only),gatefix,snowflake-arctic-embed-m,rankfusion,none,True,,,0.4533,0.46,0.4114,0.0,0,0.66,0.788,0.92,1.0,0.968,0.8,0.668
+all-MiniLM-L6-v2 | linear | harmonic,matrix,all-MiniLM-L6-v2,linear,harmonic,True,,,0.2724,0.2919,0.4114,0.4,2,0.44,0.572,0.008,0.04,0.94,0.8,0.5676
+all-MiniLM-L6-v2 | linear | asymmetric,matrix,all-MiniLM-L6-v2,linear,asymmetric,True,,,0.2844,0.3048,0.4114,0.4,4,0.46,0.56,0.008,0.04,0.94,0.8,0.5676
+all-MiniLM-L6-v2 | rankfusion | harmonic,matrix,all-MiniLM-L6-v2,rankfusion,harmonic,True,,,0.3335,0.3491,0.4114,0.2,1,0.48,0.5,0.012,0.06,0.94,0.8,0.5676
+all-MiniLM-L6-v2 | rankfusion | asymmetric,matrix,all-MiniLM-L6-v2,rankfusion,asymmetric,True,,,0.2211,0.2329,0.4114,0.4,3,0.36,0.548,0.072,0.36,0.94,0.8,0.5676
+all-mpnet-base-v2 | linear | harmonic,matrix,all-mpnet-base-v2,linear,harmonic,True,,,0.2703,0.2809,0.4114,0.6,3,0.5,0.664,0.004,0.02,0.944,0.76,0.578
+all-mpnet-base-v2 | linear | asymmetric,matrix,all-mpnet-base-v2,linear,asymmetric,True,,,0.2772,0.311,0.4114,0.2,1,0.46,0.472,0.008,0.04,0.944,0.76,0.578
+all-mpnet-base-v2 | rankfusion | harmonic,matrix,all-mpnet-base-v2,rankfusion,harmonic,True,,,0.3733,0.3894,0.4114,0.2,2,0.5,0.556,0.004,0.02,0.944,0.76,0.578
+all-mpnet-base-v2 | rankfusion | asymmetric,matrix,all-mpnet-base-v2,rankfusion,asymmetric,True,,,0.2481,0.2734,0.4114,0.2,1,0.4,0.452,0.004,0.02,0.944,0.76,0.578
+arctic-embed-m | linear | harmonic,reference,snowflake-arctic-embed-m,linear,harmonic,True,,,0.195,0.1859,0.4114,0.0,0,0.38,0.32,0.0,0.0,0.968,0.8,0.668
+arctic-embed-m | linear | asymmetric,reference,snowflake-arctic-embed-m,linear,asymmetric,True,,,0.4451,0.465,0.4114,0.4,2,0.64,0.748,0.0,0.0,0.968,0.8,0.668
+arctic-embed-m | rankfusion | harmonic,reference,snowflake-arctic-embed-m,rankfusion,harmonic,True,,,0.4067,0.3932,0.4114,0.0,0,0.58,0.42,0.0,0.0,0.968,0.8,0.668
+arctic-embed-m | rankfusion | asymmetric (deployed),reference,snowflake-arctic-embed-m,rankfusion,asymmetric,True,,,0.4766,0.4913,0.4114,0.6,3,0.66,0.788,0.0,0.0,0.968,0.8,0.668
+P all-MiniLM-L6-v2 kNN only,probe,all-MiniLM-L6-v2,linear,none,False,,,-0.0138,0.0243,0.4114,0.0,0,0.22,0.4287,0.747,0.8,0.456,0.8,0.5676
+P all-mpnet-base-v2 kNN only,probe,all-mpnet-base-v2,linear,none,False,,,0.0454,0.0891,0.4114,0.0,0,0.26,0.3045,0.7799,0.8782,0.684,0.76,0.578
+P snowflake-arctic-embed-m kNN only,probe,snowflake-arctic-embed-m,linear,none,False,,,0.4621,0.4781,0.4114,0.0,0,0.64,0.2054,0.389,0.4627,1.0,0.8,0.668
+S margin=0.01 target=0.9,sensitivity,snowflake-arctic-embed-m,rankfusion,asymmetric,True,0.01,0.9,0.4838,0.4989,0.4114,0.6,3,0.66,0.788,0.0,0.0,0.94,0.8,0.668
+S margin=0.01 target=0.95,sensitivity,snowflake-arctic-embed-m,rankfusion,asymmetric,True,0.01,0.95,0.4774,0.4924,0.4114,0.6,3,0.66,0.788,0.0,0.0,0.956,0.8,0.668
+S margin=0.01 target=0.99,sensitivity,snowflake-arctic-embed-m,rankfusion,asymmetric,True,0.01,0.99,0.4696,0.4841,0.4114,0.6,3,0.66,0.788,0.0,0.0,0.968,0.8,0.668
+S margin=0.02 target=0.9,sensitivity,snowflake-arctic-embed-m,rankfusion,asymmetric,True,0.02,0.9,0.4813,0.4959,0.4114,0.6,3,0.66,0.796,0.0,0.0,0.94,0.8,0.668
+S margin=0.02 target=0.95,sensitivity,snowflake-arctic-embed-m,rankfusion,asymmetric,True,0.02,0.95,0.4766,0.4913,0.4114,0.6,3,0.66,0.788,0.0,0.0,0.968,0.8,0.668
+S margin=0.02 target=0.99,sensitivity,snowflake-arctic-embed-m,rankfusion,asymmetric,True,0.02,0.99,0.4711,0.4859,0.4114,0.6,3,0.66,0.788,0.0,0.0,0.976,0.8,0.668
+S margin=0.04 target=0.9,sensitivity,snowflake-arctic-embed-m,rankfusion,asymmetric,True,0.04,0.9,0.4903,0.5024,0.4114,0.6,3,0.68,0.796,0.036,0.18,0.94,0.8,0.668
+S margin=0.04 target=0.95,sensitivity,snowflake-arctic-embed-m,rankfusion,asymmetric,True,0.04,0.95,0.4795,0.4917,0.4114,0.6,3,0.66,0.796,0.024,0.12,0.976,0.8,0.668
+S margin=0.04 target=0.99,sensitivity,snowflake-arctic-embed-m,rankfusion,asymmetric,True,0.04,0.99,0.4734,0.486,0.4114,0.6,3,0.66,0.788,0.016,0.08,0.992,0.8,0.668
